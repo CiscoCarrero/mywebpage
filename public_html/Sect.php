@@ -7,9 +7,8 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" 
     rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" 
     crossorigin="anonymous">
-    <link rel="stylesheet" href="Styles.css">
 </head>
-<body background="back.jpg">
+<body>
     <section id="TopPage">
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -32,26 +31,58 @@
     </div>
     </section>
     <center>
-        <br>
-        <br>
-        <br>
-    <img src="fotoPerf.jpg"/>
-    <h1 font-size: 250>Welcome to my Webpage!!!</h1>
-    <h2>My name is Francisco</h2>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <p>On this page you will find a series of JavaScriprt programs as well as PHP.</p>
-      <p>If you click on the "Programs" button you will be able to see them.</p>
-    <p>You will also be able to see my Curriculum Vitae by clicking on the button "CV".</p>
-      <p>If you click on the "PHP" button you will be able to see some basic PHP programs.</p>
-    <p>To see the references, press the button "References".</p>
+    <div>
+    <h3>We’ll display today’s date and day by PHP!</h3>
+    <div>
+        <?php
+            echo 'Today’s date is <b>' . date('Y/m/d') . '</b> and it’s a <b>'.date('l').'</b> today!';
+        ?>
+    </div>
+    <div>Again, this is static HTML content.</div>
+    </div>
+    <!--https://code.tutsplus.com/es/tutorials/how-to-use-php-in-html-code--cms-34378-->
     </center>
+    <center>
+      <br>
+      <br>
+      <br>
+      <br>
+    <div>
+    <h2>This program shows a array of strings</h2>
+    <div>
+    <?php
+    $cars = array("Honda", "RAM", "Toyota"); 
+    echo "I like " . $cars[0] . ", " . $cars[1] . " and " . $cars[2] . ".";
+    ?>
+    </div>
+    </div>
+    </center>
+    <!--https://www.w3schools.com/php/phptryit.asp?filename=tryphp_array_num -->
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+    <div>
+      <h1>This program shows the names of my family members</h1>
+      <?php
+      function familyName($fname) {
+      echo "$fname ";
+      }
+
+      familyName("Maria, ");
+      familyName("Francisco, ");
+      familyName("Gabriela, ");
+      familyName("Luis, ");
+      familyName("Keishla, ");
+      familyName("Aron");
+      ?>
+    </div>
+    </center>
+    <!--https://www.w3schools.com/php/phptryit.asp?filename=tryphp_function2 -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous">
-    </script>
 </body>
 </html>
