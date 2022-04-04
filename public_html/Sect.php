@@ -9,6 +9,11 @@
     crossorigin="anonymous">
 </head>
 <body>
+  <style>
+    body{
+        background: #FAEDDD;
+      }
+  </style>
     <section id="TopPage">
       <div>
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -30,6 +35,9 @@
           </nav>
     </div>
     </section>
+    <br>
+    <br>
+    <br>
     <center>
     <div>
     <h3>We’ll display today’s date and day by PHP!</h3>
