@@ -1,0 +1,47 @@
+{
+  "general": {
+    "name": "Francisco Carrero",
+    "label": "Programmer",
+    "email": "francisco.carrero@upr.edu",
+    "phone": "(939) 366-6304",
+    "location": {
+      "address": "Bo Piedras Blancas, Villa Alameda, Car 416",
+      "postalCode": "00602",
+      "city": "Aguada",
+      "countryCode": "PR",
+      "region": "Puerto Rico"
+    }
+  },
+  "work": [{
+    "name": "Ocean Boulevard",
+    "position": "Waiter",
+    "startDate": "2013-01-01",
+    "endDate": "2014-01-01",
+    "summary": "Description…"
+  }],
+  "education": [{
+    "institution": "Universidad de Puerto Rico Recinto de Mayaguez",
+    "area": "Computer Science",
+    "studyType": "Bachelor",
+    "startDate": "08-2018",
+    "endDate": "05-2023",
+    "score": "3.15"
+  }],
+  "skills": [{
+    "name": "Programacion",
+    "level": "Nivel Intermedio",
+    "keywords": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "C++",
+      "Python"
+    ]
+  }],
+  "languages": [{
+    "language": [
+      "Espanol",
+      "Ingles"
+    ],
+    "fluency": "Bilingue"
+  }]}
