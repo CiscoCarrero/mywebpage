@@ -95,7 +95,7 @@
       <center>
         <a href = "Curriculum_FranciscoCarrero.pdf" download ="Curriculum Francisco Carrero.pdf"
 
-          <b> download PDF </b>
+          <b> download CV PDF </b>
           
         </a>
       </center>
@@ -106,33 +106,69 @@
 
       <div>
         <script>
-          const header = document.querySelector('header');
-          const section = document.querySelector('section');
-
-          const request = new XMLHttpRequest();
-          request.open('Get', requestURL);
-
-          request.responseType = 'json';
-          request.send();
-
-          request.onload = function() {
-            const myResume = request.response;
-            populateHeader(myResume);
-          }
-
-          function populateHeader(jsonObj) {
-            const myH1 = document.createElement('h1');
-            myH1.textContent = jsonObj['general'];
-            header.appendChild(myH1);
-
-            const myPara = document.createElement('p');
-            myPara.textContent = 'Work: ' + jsonObj['work'] + ' // Education: ' + jsonObj['education'] + ' // Skills: ' + jsonObj['skills'] + ' // Languages: ' + jsonObj['languages'];
-            header.appendChild(myPara);
-          }
-
-          const requestURL = '/resume.json'
+          JsonData = [
+          {
+    "general": {
+      "name": "Francisco Carrero",
+      "label": "Programmer",
+      "email": "francisco.carrero@upr.edu",
+      "phone": "(939) 366-6304",
+      "location": {
+        "address": "Bo Piedras Blancas, Villa Alameda, Car 416",
+        "postalCode": "00602",
+        "city": "Aguada",
+        "countryCode": "PR",
+        "region": "Puerto Rico"
+      }
+    },
+    "work": [{
+      "name": "Ocean Boulevard",
+      "position": "Waiter",
+      "startDate": "2013-01-01",
+      "endDate": "2014-01-01",
+      "summary": "Description…"
+    }],
+    "education": [{
+      "institution": "Universidad de Puerto Rico Recinto de Mayaguez",
+      "area": "Computer Science",
+      "studyType": "Bachelor",
+      "startDate": "08-2018",
+      "endDate": "05-2023",
+      "score": "3.15"
+    }],
+    "skills": [{
+      "name": "Programacion",
+      "level": "Nivel Intermedio",
+      "keywords": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "C++",
+        "Python"
+      ]
+    }],
+    "languages": [{
+      "language": [
+        "Espanol",
+        "Ingles"
+      ],
+      "fluency": "Bilingue"
+    }]}
+  ]
         </script>
       </div>
+      <div>
+        <center>
+        <button type="button" onclick="printJS({printable: JsonData, properties: ['general.name', 'general.label','general.phone',
+        'general.location.address','general.location.city','education.institution', 'skills.name'], type: 'json'})">
+          Print Resume
+       </button>
+       </center>
+        </script>
+      </div>
+      <br>
+      <br>
+    <script src="print.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" 
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous">
